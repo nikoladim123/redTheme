@@ -1,0 +1,678 @@
+@font-face {
+  font-family: 'poppins-regular';
+  font-display: auto;
+  src: url('../fonts/poppins-v5-latin-regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DobkinPlain';
+  font-display: auto;
+  src: url('../fonts/DobkinPlain-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  font-display: auto;
+  src: url('../fonts/Montserrat-Regular.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat-Bold';
+  font-display: auto;
+  src: url('../fonts/Montserrat-Bold.otf') format('truetype');
+}
+label{
+  font-weight: normal;
+}
+.labelBox p{
+  display: inline;
+}
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: pink;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+body{
+  margin: 0;
+  background-color: rgb(249,242,242);
+}
+
+input:focus{
+  outline: none !important;
+}
+
+
+img{
+  width: 100%;
+}
+
+/* header */
+header{
+  position: relative;
+}
+.banner{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.headingBox{
+  position: absolute;
+  width: 57vw;
+  border-bottom: 1px solid white;
+  margin-left: 50%;
+  left: -28.5vw;
+  text-align: center;
+}
+
+h1{
+  font-family: 'poppins-regular';
+  font-weight: 300;
+  font-size: 2.6665vw;
+  color: rgba(249, 153, 155, 0.5);
+  margin-top: 1.5vw;
+}
+
+.headingBox h2{
+  font-size: 2.2222vw;
+  font-family: 'DobkinPlain';
+  margin-bottom: -0.5vw;
+  font-weight: 800;
+  color: rgb(231,157,161);
+}
+
+.links{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 0.8184vw solid rgba(249, 153, 155, 0.5);
+  padding-top: 0.6816vw;
+}
+.links a{
+  transition: 0.3s;
+  text-decoration: none;
+  font-size: 1.037vw;
+  color: rgba(209, 209, 209, 0.4);
+  margin-right: 2.5vw;
+}
+.links a:hover{
+  color: rgba(209, 209, 209, 0.8);
+}
+.linksOne{
+  margin-right: 6vw;
+}
+.linksTwo{
+  margin-right: 0.744vw;
+}
+
+.threeImages{
+  position: absolute;
+  width: 65vw;
+  height: 33.38vw;
+  /* border: 1px solid yellow; */
+  top: 25.849vw;
+  margin-left: 50%;
+  left: -32.5vw;
+  display: flex;
+  justify-content: center;
+}
+/* carSection */
+.carSection{
+  position: relative;
+  border: 1px solid red;
+  margin-top: 60vw;
+}
+/* main */
+main{
+  display: flex;
+  justify-content: center;
+}
+.leftContent{
+  background: white;
+  position: relative;
+  width: 64vw;
+  margin-right: 2vw;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+.rightContent{
+  position: relative;
+  width: 26vw;
+}
+
+.recentPosts{
+  width: 18.228vw;
+  margin-bottom: 0.7vw;
+  margin-left: 0.5vw;
+}
+.content{
+  transition: 0.4s;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  position: relative;
+}
+.content:hover{
+  box-shadow: 0px 0px 4.555vw -1.286vw rgba(0,0,0,0.75);
+  z-index: 1;
+}
+
+.postImage{
+  width: 27vw;
+  height: 40.59vw;
+  margin-bottom: 1.9188vw;
+  margin-right:1.7712vw;
+}
+
+.description{
+  padding-right: 2.4354vw;
+  width: 51%;
+}
+.button{
+  transition: 0.3s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.0442vw;
+  height: 2.583vw;
+  border-radius: 5vw;
+  overflow: hidden;
+  box-shadow: 0px 15px 10px -5px rgba(255,43,110,0.33);
+  margin-top: 5.0922vw;
+  top: 0;
+}
+.button:hover{
+  top: -5px;
+  cursor: pointer;
+  box-shadow: 0px 25px 13px -5px rgba(255,43,110,0.33);
+}
+.button p{
+  margin: 0;
+  position: relative;
+  pointer-events: none;
+  color: white;
+  font-size: 1.03321vw;
+}
+
+.button::before{
+  transition: 0.3s;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: -15%;
+  top: 0;
+  background: linear-gradient(to right, rgba(232,20,112,1) 0%, rgba(232,20,112,1) 35%, rgba(249,102,62,1) 65%, rgba(249,102,62,1) 100%);
+}
+.button:hover:before{
+  left: -85%;
+}
+
+.description h2{
+  font-family: 'Montserrat-Bold';
+  font-size: 1.77121vw;
+  margin-top: 1.6974vw;
+}
+.contentText{
+  font-size: 1.18vw;
+  margin-top: 2.87822vw;
+  color: rgb(153,153,153);
+  line-height: 1.8;
+}
+.postDate{
+  font-size: 1.03321vw;
+  color: rgb(223,122,131);
+  margin-top: 2.80442vw;
+}
+
+.pageNumberContainer{
+  display: flex;
+  padding-left: 2.4354vw;
+  padding-top: 4.7970vw;
+  padding-bottom: 4.7970vw;
+}
+.pageNumberContainer div{
+  transition: 0.3s;
+  border:1px solid rgb(221,221,221);
+  background-color: #fee8e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(153,153,153);
+  font-size: 1.47601vw;
+  width: 2.4354vw;
+  height: 2.4354vw;
+  margin-right: 0.738vw;
+}
+.pageNumberContainer div:hover{
+  cursor: pointer;
+  filter: brightness(105%);
+}
+
+
+
+/* right content */
+.rightContent{
+  background-color: white;
+}
+.searchHolder{
+  background-color: rgb(249,242,242);
+  padding-top: 0.7vw;
+  padding-bottom: 1vw;
+}
+.searchBox{
+  width: 100%;
+  height: 3.911vw;
+  border-radius: 10vw;
+  border: 6px solid white;
+  background-color: rgb(245,236,239);
+  padding: 1vw;
+  padding-left: 3vw;
+  font-size: 1.3284vw;
+  color: rgb(110,110,110);
+}
+
+.searchIconBox{
+  transition: 0.3s;
+  position: absolute;
+  right: 6px;
+  top: 0.9vw;
+  width: 3.5vw;
+  height: 3.5vw;
+  border-radius: 50%;
+  background-color: rgb(241,181,195);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchIconBox:hover{
+  cursor: pointer;
+  background-color: rgb(251,201,215);
+}
+.searchIconBox img{
+  width: 50%;
+  height: 50%;
+}
+
+.searchBox::placeholder{
+  font-size: 1.3284vw;
+  color: rgb(170,170,170);
+}
+
+.babyIMG{
+  margin-bottom: 4vw;
+}
+
+.myFB{
+  margin-bottom: 4vw;
+}
+.contactMe{
+  width: 12.25vw;
+  margin-top: 4vw;
+  margin-bottom: 0.738vw;
+  margin-left: 5px;
+}
+
+.contactMeContainer{
+  background-color: rgb(245,112,116);
+  margin:0px 5px;
+}
+.mailBox{
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, rgba(210,210,210,1) 0%, rgba(235,235,235,1) 53%, rgba(210,210,210,1) 100%);
+}
+
+.mailPNG{
+  width: 4.723vw;
+  margin-bottom: 0.6642vw;
+  margin-top: 0.2214vw;
+}
+
+.contactMeForm{
+  padding: 3vw 2vw;
+}
+
+.contactMeForm p{
+  color: white;
+  font-size: 1.180811vw;
+}
+.formP{
+  display: inline-block;
+}
+
+
+
+.contactCheckbox{
+  background-color: white;
+}
+.contactInput{
+  background: transparent;
+  border: 1px solid white;
+  width: 18.8929vw;
+  height: 2.583vw;
+  margin-bottom: 0.738vw;
+  padding-left: 1vw;
+  font-size: 1.0332vw;
+  color: white;
+}
+
+.contactInput::placeholder{
+  color: white;
+  font-size: 1.0332vw;
+  opacity: 0.7;
+}
+
+.captcha{
+  width: 16.1623vw;
+  margin-top: 4.5vw;
+}
+
+.contactSubmitButton{
+  transition: 0.3s;
+  width: 18.966vw;
+  height: 2.8782vw;
+  margin-top: 0.8856vw;
+  background-color: #fffa6e;
+  border:none;
+  font-size: 1.4760vw;
+}
+.contactSubmitButton:hover{
+  filter: brightness(140%);
+}
+
+
+/* sixImageGrid */
+.sixImageGrid{
+  position: relative;
+  margin-top: 13.4317vw;
+  /* border: 1px solid; */
+  /* height: 26.715vw; */
+  width: 100%;
+  display: flex;
+}
+.sixImageGrid img{
+  /* width: 16.6%; */
+}
+.sixImageDiv{
+  position: relative;
+  overflow: hidden;
+  width: inherit;
+}
+.sixImageBlackDivInside{
+  opacity: 0;
+  transition: 0.4s;
+  position: absolute;
+  bottom: -13.653vw;
+  left: -15.793vw;
+  width: 13.653vw;
+  height: 15.793vw;
+  background-color: rgba(0,0,0,0.9);
+  padding: 2.28782vw;
+}
+.sixImageBlackDivInside p:nth-child(1){
+  color: white;
+  font-size: 1.4vw;
+  opacity: 0.4;
+}
+.sixImageBlackDivInside p:nth-child(2){
+  color: white;
+  font-size: 1vw;
+  opacity: 0.2;
+}
+
+.sixImageBlackDivInside a{
+  transition: 0.3s;
+  color: white;
+  font-size: 1.1vw;
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+.sixImageBlackDivInside a:hover{
+  opacity: 1;
+}
+
+/* ping form */
+.pingFormSection{
+  position: relative;
+  height: 24.428vw;
+  background-color: #fdcfca;
+  margin-top: 10.1845vw;
+}
+
+.pinkFormBox{
+  position: absolute;
+  height: 16.8265vw;
+  width: 83.5424vw;
+  background-color: #fa999b;
+  box-shadow:  0px 49px 99px 3px rgba(241,88,102,0.9);
+  right: 0;
+  top: -2.7306vw;
+}
+
+.bigPinkCircle{
+  position: absolute;
+  width: 19.114vw;
+  height: 19.114vw;
+  background-color: #fdcdc9;
+  border-radius: 50%;
+  box-shadow: -5px 0px 100px 1px rgba(247,177,177,0.9);
+  top: 2.8044vw;
+  margin-left: 5.83vw;
+}
+.smallPinkCircle{
+  position: absolute;
+  width: 13.3579vw;
+  height: 13.3579vw;
+  background-color: #fdcdc9;
+  border-radius: 50%;
+  box-shadow: -5px 0px 100px 1px rgba(247,177,177,0.9);
+  left: 3vw;
+  top: 0.738vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.smallPinkCircle img{
+  width: 7.527vw;
+}
+
+.pinkSectionForm{
+  /* border: 1px solid; */
+  position: relative;
+  margin-left: 27.8966vw;
+  margin-top: 6.1992vw;
+}
+.pinkSectionForm h2{
+  font-family: 'Montserrat-Bold';
+  letter-spacing: -3px;
+  margin: 0;
+  font-size: 2.656vw;
+  color: #895a5b;
+  margin-bottom: 1vw;
+}
+.pinkSectionForm p{
+  display: inline;
+  font-family: 'Montserrat-Regular';
+  color: #895a5b;
+  font-size: 1.18081vw;
+}
+.pinkFormTextInput{
+  height: 3.1734vw;
+  width: 18.6715vw;
+  background-color: transparent;
+  border: 1px solid #fdcfca;
+  padding-left: 1vw;
+  font-size: 1.0332vw;
+  margin-left: 3.69vw;
+}
+.pinkInBut{
+  display: flex;
+  position: relative;
+  margin-left: 12vw;
+  top: -3vw;
+}
+.pinkFormButton{
+  background: #fdcfca;
+  height: 3.1734vw;
+  width: 3.1734vw;
+  border: 1px solid #fdcfca;
+  font-size: 1.6236vw;
+  color: #895a5b;
+  font-family: 'Montserrat-Regular';
+}
+
+
+/* instaSection */
+.instaSection{
+  position: relative;
+  margin-top: 8.856vw;
+  /* border: 1px solid blue; */
+}
+
+.instagram{
+  width: 17.8597vw;
+  margin-left: 5.4612vw;
+  position: relative;
+  top: 1vw;
+}
+
+.instaBG{
+  position: relative;
+  background: linear-gradient(to bottom, rgba(253,207,202,1) 0%, rgba(250,153,153,1) 100%);
+  padding-top: 5.092vw;
+  padding-bottom: 15.719vw;
+}
+
+.instaGrid{
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 3px;
+  width: 85vw;
+  margin-left: 7.2vw;
+}
+.instaGrid img{
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.myFlickr{
+  width: 13.21vw;
+  position: absolute;
+  bottom: 0;
+  left: 7.2vw;
+}
+
+/* bottomSection */
+.bottomSection{
+  display: flex;
+  padding-left: 19.926vw;
+  padding-right: 19.926vw;
+  padding-top: 11.5129vw;
+  padding-bottom: 4.3542vw;
+}
+.bottomSection img{
+  transition: 0.5s;
+  margin-right: 0.7vw;
+  margin-left: 0.7vw;
+}
+.bottomSection img:hover{
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+/* footer */
+footer{
+  position: relative;
+  background-color: #363036;
+  height: 10.3321vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashed{
+  position: absolute;
+  width: 100%;
+  top: 2px;
+  border-top: 1px dashed rgb(104,100,104);
+}
+footer img{
+  margin-top: 1.845vw;
+  width: 11.66vw;
+}
+
+footer p span{
+  color: white;
+}
+
+footer p{
+  margin-top: 5.461vw;
+  color: rgb(104,100,104);
+  font-size: 0.8856vw;
+}
