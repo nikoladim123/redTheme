@@ -33,7 +33,7 @@
     </header>
 
     <section class="carSection">
-      <div class="container" style="display:none;">
+      <div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -45,15 +45,15 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="assets/images/1.jpg" alt="Los Angeles" style="width:100%;">
+              <img src="assets/images/bscar/1.jpg" alt="Los Angeles" style="width:100%;">
             </div>
 
             <div class="item">
-              <img src="assets/images/2.jpg" alt="Chicago" style="width:100%;">
+              <img src="assets/images/bscar/2.jpg" alt="Chicago" style="width:100%;">
             </div>
 
             <div class="item">
-              <img src="assets/images/3.jpg" alt="New york" style="width:100%;">
+              <img src="assets/images/bscar/3.jpg" alt="New york" style="width:100%;">
             </div>
           </div>
 
@@ -68,11 +68,31 @@
           </a>
         </div>
       </div>
+
+      <img class="popularPosts" src="assets/images/PopularPosts.png" alt="">
+
+      <div class="leftCarBox">
+        <div class="leftRightCarBox">
+          <img class="leftArrow" src="assets/images/leftArrow.jpg" alt="">
+          <img class="rightArrow" src="assets/images/rightArrow.jpg" alt="">
+        </div>
+        <div class="button buttonCar">
+          <p>Travel</p>
+        </div>
+        <p class="carDate">11/22/2018</p>
+        <h2>A SUNNY DAY AT THE LOCAL <br> LAKE IN SAN MARINO </h2>
+        <p class="carLorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com</p>
+        <p class="pinkCyrus">By Cyrus Khamak</p>
+      </div>
+
     </section>
 
     <main>
       <section class="leftContent">
-        <img class="recentPosts" src="assets/images/RecentPosts.png" alt="">
+        <div class="recentPostsDiv">
+          <img class="recentPosts" src="assets/images/RecentPosts.png" alt="">
+        </div>
 
         <div class="content">
           <img class="postImage" src="assets/images/post1.jpg" alt="">
@@ -166,11 +186,11 @@
           <form class="contactMeForm" action="index.html" method="post">
             <p>I would like to recieve email when you</p>
             <div id="contactMeLabelBox" class="labelBox">
-                <label class="container"><p>Post a new blog post</p>
+                <label class="containerInput"><p>Post a new blog post</p>
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
                 </label>
-                <label class="container"><p>or upload a new photo</p>
+                <label class="containerInput"><p>or upload a new photo</p>
                 <input type="checkbox">
                 <span class="checkmark"></span>
                 </label>
@@ -245,11 +265,11 @@
         <form class="pinkSectionForm" action="index.html" method="post">
           <h2>PLEASE NOTIFY ME OF:</h2>
           <div class="labelBox">
-              <label class="container"><p>New Blog posts</p>
+              <label class="containerInput"><p>New Blog posts</p>
               <input type="checkbox" checked="checked">
               <span class="checkmark"></span>
               </label>
-              <label class="container"><p>New photo uploads</p>
+              <label class="containerInput"><p>New photo uploads</p>
               <input type="checkbox">
               <span class="checkmark"></span>
               </label>

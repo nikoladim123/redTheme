@@ -25,7 +25,7 @@ label{
   display: inline;
 }
 /* The container */
-.container {
+.containerInput {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -39,7 +39,7 @@ label{
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+.containerInput input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -58,12 +58,12 @@ label{
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.containerInput:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.containerInput input:checked ~ .checkmark {
   background-color: pink;
 }
 
@@ -75,12 +75,12 @@ label{
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.containerInput input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
+.containerInput .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -92,7 +92,87 @@ label{
   transform: rotate(45deg);
 }
 
+/* carSection */
+.carSection{
+  position: relative;
+  /* border: 1px solid red; */
+  margin-top: 68vw;
+  padding-bottom: 18.6125vw;
+}
+/* BOOTSTRAP CAR */
+.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+  width: 54vw !important;
+  height: 36vw !important;
+}
+.container{
+  width: 54vw;
+  margin: 0;
+  margin-left: 41.7712vw;
+}
+.carousel-control{
+  display: none;
+}
+/* BOOTSTRAP CAR */
+.popularPosts{
+  position: absolute;
+  top: 8vw;
+  left: 1;
+  left: 4vw;
+  width: 19vw;
+}
+.leftCarBox{
+  /* border: 1px solid black; */
+  position: absolute;
+  width: 42.73vw;
+  height: 28.7vw;
+  background: rgb(253,247,247);
+  top: 0;
+  margin-top: 14.6125vw;
+  margin-left: 3.69vw;
+  box-shadow: 0px 0px 67px -12px rgba(0,0,0,0.75);
+}
 
+.leftRightCarBox{
+  /* border: 1px solid; */
+  position: absolute;
+  right: 2.4354vw;
+  top: 2.4354vw;
+  display: flex;
+}
+.leftRightCarBox img{
+  width: 3.4686vw;
+  margin-left: 0.5vw;
+}
+.leftRightCarBox img:hover{
+  cursor: pointer;
+}
+.carDate{
+  position: absolute;
+  top: 4vw;
+  left: 13vw;
+  color: rgb(143,143,143);
+}
+
+.leftCarBox h2{
+  margin-left: 4vw;
+  font-family: 'Montserrat-Bold';
+  font-size: 2.214vw;
+}
+
+.carLorem{
+  margin-left: 4vw;
+  padding-right: 5vw;
+  font-size: 1.107vw;
+  color: rgb(153,153,153);
+  font-family: 'Montserrat-Regular';
+  line-height: 2;
+}
+
+.pinkCyrus{
+  font-size: 1.0332vw;
+  color: #f78fa6;
+  margin-left: 4vw;
+}
 
 body{
   margin: 0;
@@ -177,12 +257,7 @@ h1{
   display: flex;
   justify-content: center;
 }
-/* carSection */
-.carSection{
-  position: relative;
-  border: 1px solid red;
-  margin-top: 60vw;
-}
+
 /* main */
 main{
   display: flex;
@@ -201,6 +276,10 @@ main{
   width: 26vw;
 }
 
+.recentPostsDiv{
+  background-color: rgb(249,242,242);
+  outline: 1px solid rgb(249,242,242);
+}
 .recentPosts{
   width: 18.228vw;
   margin-bottom: 0.7vw;
@@ -269,6 +348,12 @@ main{
 }
 .button:hover:before{
   left: -85%;
+}
+
+.buttonCar{
+  margin-left: 4vw;
+  margin-top: 3vw;
+  margin-bottom: 4vw;
 }
 
 .description h2{
