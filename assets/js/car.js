@@ -127,4 +127,10 @@ leftArrow[1].addEventListener('click',()=>{
   if (checkArrow === 0) {
     left();
   }
-})
+});
+
+setInterval(function () {
+  if (checkArrow === 0) {
+    right();
+  }
+}, 6000);

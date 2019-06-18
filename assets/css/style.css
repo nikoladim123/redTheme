@@ -18,6 +18,9 @@
   font-display: auto;
   src: url('../fonts/Montserrat-Bold.otf') format('truetype');
 }
+html {
+  scroll-behavior: smooth;
+}
 label{
   font-weight: normal;
 }
@@ -207,19 +210,26 @@ header{
 }
 
 h1{
+  transition: 0.3s;
   font-family: 'poppins-regular';
   font-weight: 300;
   font-size: 2.6665vw;
   color: rgba(249, 153, 155, 0.5);
   margin-top: 1.5vw;
 }
+h1:hover{
+  color: rgba(249, 153, 155, 0.7);
+}
 
 .headingBox h2{
   font-size: 2.2222vw;
   font-family: 'DobkinPlain';
   margin-bottom: -0.5vw;
-  font-weight: 800;
-  color: rgb(231,157,161);
+  font-weight: 500;
+  color: rgba(232,230,199,0.25);
+}
+.headingBox a:hover{
+  text-decoration: none;
 }
 
 .links{
@@ -239,6 +249,9 @@ h1{
 .links a:hover{
   color: rgba(209, 209, 209, 0.8);
 }
+#blogSelected{
+  color: rgba(209, 209, 209, 0.8);
+}
 .linksOne{
   margin-right: 6vw;
 }
@@ -247,11 +260,11 @@ h1{
 }
 
 .threeImages{
-  position: absolute;
+  position: relative;
   width: 65vw;
   height: 33.38vw;
   /* border: 1px solid yellow; */
-  top: 25.849vw;
+  top: 32.849vw;
   margin-left: 50%;
   left: -32.5vw;
   display: flex;
@@ -688,7 +701,10 @@ main{
 
 .instaBG{
   position: relative;
-  background: linear-gradient(to bottom, rgba(253,207,202,1) 0%, rgba(250,153,153,1) 100%);
+  transition: 3s;
+  /* background: linear-gradient(to bottom, rgba(253,207,202,1) 0%, rgba(250,153,153,1) 100%); */
+  /* background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%); */
+  background: rgb(249,242,242);
   padding-top: 5.092vw;
   padding-bottom: 15.719vw;
 }
@@ -760,4 +776,26 @@ footer p{
   margin-top: 5.461vw;
   color: rgb(104,100,104);
   font-size: 0.8856vw;
+}
+
+.arrowToTop{
+  position: absolute;
+  width: 2.89vw;
+  height: 2.89vw;
+  background: #fde7de;
+  right: 2vw;
+  top: 2vw;
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1px solid #d16381;
+}
+
+.arrowToTop p{
+  margin: 0 !important;
+  font-size: 2vw;
+  font-weight: 600;
+  transform: scale(1,2);
+  color: #d16381;
 }

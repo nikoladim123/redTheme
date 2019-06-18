@@ -1,5 +1,6 @@
 var sixImageDiv = document.getElementsByClassName('sixImageDiv');
 var sixImageBlackDivInside = document.getElementsByClassName('sixImageBlackDivInside');
+var instaBG = document.getElementsByClassName('instaBG');
 
 // six image flexbox
 // six image flexbox
@@ -18,3 +19,21 @@ for (var i = 0; i < sixImageDiv.length; i++) {
     e.target.childNodes[3].style.opacity = '0';
   })
 }
+
+
+// cheap anim
+// cheap anim
+// cheap anim
+function cheapAnim() {
+  if(window.innerHeight / 100 * 80 > instaBG[0].getBoundingClientRect().top){
+    instaBG[0].style.background = 'rgba(253,207,202,1)';
+  }
+  // console.log(instaBG[0].getBoundingClientRect());
+}
+
+
+
+// windows events
+window.addEventListener('scroll',()=>{
+  cheapAnim();
+})

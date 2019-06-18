@@ -3,8 +3,8 @@ body{
   background-color: rgb(249,242,242);
 }
 .sectionCar{
-  margin-top: 64vw;
-  height: 62vw;
+  margin-top: 53vw;
+  height: 59vw;
   position: relative;
 }
 
@@ -32,7 +32,7 @@ body{
   top: 0;
   margin-top: 14.6125vw;
   right: 53.21vw;
-  box-shadow: 0px 0px 67px -12px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 88px -41px rgba(0,0,0,0.70);;
 }
 
 .rightCarBox{
