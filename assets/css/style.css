@@ -203,7 +203,7 @@ header{
 .headingBox{
   position: absolute;
   width: 57vw;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(249, 153, 155, 0.2);
   margin-left: 50%;
   left: -28.5vw;
   text-align: center;
@@ -259,14 +259,14 @@ h1:hover{
   margin-right: 0.744vw;
 }
 
-.threeImages{
+.threeImages {
   position: relative;
-  width: 65vw;
-  height: 33.38vw;
+  width: 70vw;
+  height: 36.38vw;
   /* border: 1px solid yellow; */
   top: 32.849vw;
   margin-left: 50%;
-  left: -32.5vw;
+  left: -35vw;
   display: flex;
   justify-content: center;
 }
@@ -579,7 +579,7 @@ main{
 .sixImageBlackDivInside p:nth-child(2){
   color: white;
   font-size: 1vw;
-  opacity: 0.2;
+  opacity: 0.35;
 }
 
 .sixImageBlackDivInside a{
@@ -726,7 +726,7 @@ main{
 .myFlickr{
   width: 13.21vw;
   position: absolute;
-  bottom: 0;
+  bottom: -6vw;
   left: 7.2vw;
 }
 
