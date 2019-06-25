@@ -20,8 +20,8 @@ elem = `
   </div>
   <div class="leftTextBox">
     <div class="arrows">
-      <img onclick="left()" class="leftArrow" src="assets/images/leftArrow.jpg" alt="">
-      <img onclick="right()" class="rightArrow" src="assets/images/rightArrow.jpg" alt="">
+      <img onclick="leftTest()" class="leftArrow" src="assets/images/leftArrow.jpg" alt="">
+      <img onclick="rightTest()" class="rightArrow" src="assets/images/rightArrow.jpg" alt="">
     </div>
     <div class="button buttonCar">
       <p>Travel</p>
@@ -53,71 +53,70 @@ function setWidth() {
   headingTextInside[0].style.width = '20vw';
   textBoxFixed[0].style.width = '100%';
 }
-var checkArrow = 0;
-function right() {
-  if (checkArrow === 0) {
-    carContainerShrink();
-    setTimeout(function () {
-      setWidth();
-      checkArrow = 0;
-    }, 1500);
-    picNum++;
-    setElem();
-    sectionCarRemove();
-  }
-  checkArrow = 1;
-}
-
-function left() {
-  if (checkArrow === 0) {
-    picNum--;
-    carContainerShrink();
-    setTimeout(function () {
-      setWidth();
-      checkArrow = 0;
-    }, 1500);
-
-    setElem();
-    sectionCarRemove();
-  }
-  checkArrow = 1;
-}
 
 initWidth();
 
 
-function sectionCarRemove() {
+var checkArrow = 0;
+function leftTest() {
+  if (checkArrow === 0){
+    picNum--;
+    setDivs();
+    carContainerShrink();
+    setTimeout(function () {
+      initWidth();
+      setWidth()
+      checkArrow = 0;
+    }, 1500);
+  }
+  checkArrow = 1;
+}
+
+function rightTest() {
+  if (checkArrow === 0){
+    picNum++;
+    setDivs();
+    carContainerShrink();
+    setTimeout(function () {
+      initWidth();
+      setWidth()
+      checkArrow = 0;
+    }, 1500);
+  }
+  checkArrow = 1;
+}
+
+
+function setDivs() {
+  setElem();
   var newDiv = document.createElement('div');
   newDiv.className = 'carContainer';
   newDiv.innerHTML = elem;
-  setTimeout(function () {
-    sectionCar[0].removeChild(sectionCar[0].children[1]);
-    sectionCar[0].insertAdjacentElement('afterbegin',newDiv);
-  }, 1500);
-  console.log(sectionCar[0].children);
-}
+  sectionCar[0].removeChild(sectionCar[0].children[1]);
+  sectionCar[0].insertAdjacentElement('afterbegin',newDiv);
 
+}
 
 
 
 // listeners
 rightArrow[0].addEventListener('click',()=>{
   if (checkArrow === 0) {
-    right();
+    rightTest();
   }
 
 });
 
 rightArrow[1].addEventListener('click',()=>{
   if (checkArrow === 0) {
-    right();
+    rightTest();
   }
 })
 
 leftArrow[0].addEventListener('click',()=>{
   console.log(123);
   if (checkArrow === 0) {
-    left();
+    leftTest();
   }
 
 });
@@ -125,12 +124,12 @@ leftArrow[0].addEventListener('click',()=>{
 leftArrow[1].addEventListener('click',()=>{
   console.log(123);
   if (checkArrow === 0) {
-    left();
+    leftTest();
   }
 });
-
-setInterval(function () {
-  if (checkArrow === 0) {
-    right();
-  }
-}, 6000);
+rightTest();
+// setInterval(function () {
+//   if (checkArrow === 0) {
+//     right();
+//   }
+// }, 6000);

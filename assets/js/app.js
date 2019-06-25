@@ -25,8 +25,10 @@ for (var i = 0; i < sixImageDiv.length; i++) {
 // cheap anim
 // cheap anim
 function cheapAnim() {
-  if(window.innerHeight / 100 * 80 > instaBG[0].getBoundingClientRect().top){
+  if(window.innerHeight / 100 * 60 > instaBG[0].getBoundingClientRect().top){
     instaBG[0].style.background = 'rgba(253,207,202,1)';
+  }else{
+    instaBG[0].style.background = 'rgba(249,242,242,1)';
   }
   // console.log(instaBG[0].getBoundingClientRect());
 }
