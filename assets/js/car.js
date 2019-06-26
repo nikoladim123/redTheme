@@ -45,12 +45,12 @@ function carContainerShrink() {
 }
 
 function initWidth() {
-  headingTextInside[1].style.width = '20vw';
+  headingTextInside[1].style.width = '47vw';
   textBoxFixed[1].style.width = '100%';
 }
 
 function setWidth() {
-  headingTextInside[0].style.width = '20vw';
+  headingTextInside[0].style.width = '47vw';
   textBoxFixed[0].style.width = '100%';
 }
 
@@ -127,6 +127,7 @@ leftArrow[1].addEventListener('click',()=>{
     leftTest();
   }
 });
+
 rightTest();
 setInterval(function () {
   if (checkArrow === 0) {
