@@ -55,6 +55,7 @@ body{
     animation-name: after;
     animation-duration: 4.5s;
     animation-fill-mode: forwards;
+    animation-timing-function: linear;
 }
 
 @keyframes after {
